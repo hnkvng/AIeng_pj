@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.7">
   <diagram name="Trang-1" id="QdVctuVh_ac5PN6VSOF_">
-    <mxGraphModel dx="1687" dy="965" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="643" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -529,22 +529,22 @@
         <mxCell id="PVKdWnAXme9dXzBZIidb-180" value="Review" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="416" y="2119" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="by8V3Y5xCYRxlkdgdlGT-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="by8V3Y5xCYRxlkdgdlGT-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="146" y="16" width="26" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="by8V3Y5xCYRxlkdgdlGT-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="266" y="16" width="26" height="26" as="geometry" />
+        <mxCell id="by8V3Y5xCYRxlkdgdlGT-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="247" y="16" width="26" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="by8V3Y5xCYRxlkdgdlGT-4" value="In process" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="by8V3Y5xCYRxlkdgdlGT-4" value="In process" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="176" y="14" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="by8V3Y5xCYRxlkdgdlGT-5" value="Done" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="289" y="14" width="60" height="30" as="geometry" />
+        <mxCell id="by8V3Y5xCYRxlkdgdlGT-5" value="Done" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="270" y="14" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="by8V3Y5xCYRxlkdgdlGT-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="by8V3Y5xCYRxlkdgdlGT-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="26" y="16" width="26" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="by8V3Y5xCYRxlkdgdlGT-7" value="has been issued" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="by8V3Y5xCYRxlkdgdlGT-7" value="has been issued" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="56" y="14" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
