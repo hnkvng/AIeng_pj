@@ -1,10 +1,10 @@
 import { ReactElement } from "react"
 
 
-const WrittingPage = () : ReactElement => {
+const WritingPage = () : ReactElement => {
     return (
         <div>luyện viết</div>
     )
 }
 
-export default WrittingPage;
+export default WritingPage;

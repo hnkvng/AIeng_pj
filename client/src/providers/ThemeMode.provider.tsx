@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useMemo } from 'react';
+import { createContext, useState, ReactNode, useMemo, useContext, useEffect } from 'react';
 import { ThemeProvider } from '@mui/material';
 import { lightTheme, darkTheme } from '@theme/mode';
 
@@ -7,16 +7,21 @@ interface ThemeModeContextProps {
   mode: 'light' | 'dark';
 }
 
-export const ThemeModeContext = createContext<ThemeModeContextProps | undefined>(undefined);
 
-export const ThemeModeProvider = ({ children }: { children: ReactNode }) => {
-  const [mode, setMode] = useState<'light' | 'dark'>('light'); // Khởi tạo là light mode
+export const ThemeModeContext = createContext({} as ThemeModeContextProps);
+
+const ThemeModeProvider = ({ children }: { children: ReactNode }) => {
+  const [mode, setMode] = useState<'light' | 'dark'>(() => localStorage.getItem('theme') ? localStorage.getItem('theme') as 'light' | 'dark' : "light");
 
   const theme = useMemo(() => (mode === 'light' ? lightTheme : darkTheme), [mode]);
 
   const toggleTheme = () => {
     setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
   };
+
+  useEffect(() => {
+    localStorage.setItem('theme', mode);
+  },[mode])
 
   return (
     <ThemeModeContext.Provider value={{ toggleTheme, mode }}>
@@ -26,3 +31,7 @@ export const ThemeModeProvider = ({ children }: { children: ReactNode }) => {
     </ThemeModeContext.Provider>
   );
 };
+
+export const useThemeMode = () => useContext(ThemeModeContext);
+
+export default ThemeModeProvider;

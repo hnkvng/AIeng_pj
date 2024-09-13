@@ -16,7 +16,7 @@ const NotebookPage = lazy(() => import('@pages/notebook-page/NotebookPage'));
 const ListeningPage = lazy(() => import('@pages/listening-page/ListeningPage'));
 const SpeakingPage = lazy(() => import('@pages/speaking-page/SpeakingPage'));
 const ReadingPage = lazy(() => import('@pages/reading-page/ReadingPage'));
-const WrittingPage = lazy(() => import('@pages/writting-page/WrittingPage'));
+const WritingPage = lazy(() => import('@/pages/writing-page/WritingPage'));
 const QuizPage = lazy(() => import('@pages/quiz-page/QuizPage'));
 const TestingPage = lazy(() => import('@pages/testing-page/TestingPage'));
 const SettingPage = lazy(() => import('@pages/setting-page/SettingPage'));
@@ -100,7 +100,7 @@ const routes: RouteObject[] = [
                     {
                         path: paths.writting,
                         element: (
-                            <WrittingPage/>
+                            <WritingPage/>
                         )
                     },
                     {

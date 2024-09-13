@@ -10,7 +10,11 @@ interface InputAppProps {
     label?: string,
     value?: string,
     error?: string,
-    icon?: {
+    iconL?: {
+        target: ReactNode,
+        position: 'start' | 'end',
+    }
+    iconR?: {
         target: ReactNode,
         position: 'start' | 'end',
     }
@@ -26,7 +30,8 @@ const InputApp : ElementProps<InputAppProps> = (
         label,
         value,
         error,
-        icon,
+        iconL,
+        iconR,
         disabled,
         placeholder,
         handleChange,
@@ -43,13 +48,18 @@ const InputApp : ElementProps<InputAppProps> = (
             disabled= {disabled}
             placeholder= {placeholder}
             helperText= {error}
-            slotProps={icon && {
+            slotProps={{
                 input: {
-                    startAdornment: (
-                        <InputAdornment position= {icon.position}>
-                          {icon.target}
+                    startAdornment: iconL && (
+                        <InputAdornment position= {iconL.position}>
+                          {iconL.target}
                         </InputAdornment>
-                    )
+                    ),
+                    endAdornment: iconR && (
+                        <InputAdornment position= {iconR.position}>
+                          {iconR.target}
+                        </InputAdornment>
+                    ),
                 }
             }}
             onChange={handleChange && ((e) => {

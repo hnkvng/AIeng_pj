@@ -5,18 +5,18 @@ export const rootPaths = {
 };
 
 export default { 
-    home: `/${rootPaths.homeRoot}`,
+    home: `${rootPaths.homeRoot}`,
     login: `/${rootPaths.authRoot}/login`,
     register: `/${rootPaths.authRoot}/register`, 
-    notebook: `/${rootPaths.homeRoot}/notebook`,
-    listening: `/${rootPaths.homeRoot}/listening`,
-    speaking: `/${rootPaths.homeRoot}/speaking`,
-    reading: `/${rootPaths.homeRoot}/reading`,
-    writting: `/${rootPaths.homeRoot}/writting`,
-    quiz: `/${rootPaths.homeRoot}/quiz`,
-    testing: `/${rootPaths.homeRoot}/testing`,
-    setting: `/${rootPaths.homeRoot}/setting`,
-    support: `/${rootPaths.homeRoot}/support`,
+    notebook: `/notebook`,
+    listening: `/listening`,
+    speaking: `/speaking`,
+    reading: `/reading`,
+    writting: `/writting`,
+    quiz: `/quiz`,
+    testing: `/testing`,
+    setting: `/setting`,
+    support: `/support`,
     404: `/${rootPaths.errorRoot}/404`,
 }
 
