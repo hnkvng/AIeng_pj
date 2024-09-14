@@ -24,7 +24,7 @@ const MainLayout = ({ children }: PropsWithChildren): ReactElement => {
           }}
           PaperProps={{
             sx: {
-              backgroundImage: 'none',  // Remove the gradient overlay
+              backgroundImage: 'none', 
             },
           }}
           sx={{
@@ -47,6 +47,8 @@ const MainLayout = ({ children }: PropsWithChildren): ReactElement => {
             width: open ? drawerOpenWidth : drawerCloseWidth,
             '& .MuiDrawer-paper': {
               width: open ? drawerOpenWidth : drawerCloseWidth,
+              borderRightColor: 'text.disabled',
+              borderRightWidth: 2,
             },
           }}
         >

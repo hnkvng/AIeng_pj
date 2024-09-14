@@ -1,7 +1,7 @@
 import { Menu, Avatar, Button, Tooltip, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
 import IconifyIcon from '@components/base/IconifyIcon';
-// import profile from 'assets/images/account/Profile.png';
-import { useState, MouseEvent, useCallback, ReactElement } from 'react';
+import profile from '@assets/images/account/Profile.png';
+import { useState, MouseEvent, useCallback, ReactElement, memo} from 'react';
 import userMenuItems from '@data/usermenu-items';
 
 const UserDropdown = (): ReactElement => {
@@ -37,8 +37,8 @@ const UserDropdown = (): ReactElement => {
           },
         }}
       >
-        <Tooltip title="Aleng" arrow placement="bottom">
-          <Avatar sx={{ width: 44, height: 44 }} />
+        <Tooltip title="Nakano Miku" arrow placement="bottom">
+          <Avatar src= {profile} sx={{ width: 44, height: 44 }} />
         </Tooltip>
         <IconifyIcon
           color="common.white"
@@ -105,4 +105,4 @@ const UserDropdown = (): ReactElement => {
   );
 };
 
-export default UserDropdown;
+export default memo(UserDropdown);

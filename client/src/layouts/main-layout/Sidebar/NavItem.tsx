@@ -1,8 +1,7 @@
-import { Link, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import IconifyIcon from '@components/base/IconifyIcon';
 import { NavItem as NavItemProps } from '@data/nav-items';
-import { useLocation, useNavigate, useRoutes } from 'react-router-dom';
-import { rootPaths } from '@/router/paths';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const NavItem = ({ navItem, open }: { navItem: NavItemProps; open: boolean }) => {
   const { pathname } = useLocation();

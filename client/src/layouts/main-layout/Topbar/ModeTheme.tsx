@@ -1,7 +1,7 @@
+import { ReactElement, useState, memo } from 'react';
 import IconifyIcon from '@/components/base/IconifyIcon';
 import { useThemeMode } from '@/providers/ThemeMode.provider';
 import Switch from '@mui/material/Switch';
-import { ReactElement, useState } from 'react';
 
 
 const ModeTheme = () : ReactElement => {
@@ -29,4 +29,4 @@ const ModeTheme = () : ReactElement => {
     )
 }
 
-export default ModeTheme;
+export default memo(ModeTheme);

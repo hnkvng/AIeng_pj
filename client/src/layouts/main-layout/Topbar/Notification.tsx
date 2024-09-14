@@ -1,10 +1,9 @@
+import { ReactElement, useState, memo } from "react"
 import IconifyIcon from "@components/base/IconifyIcon"
 import { Badge, IconButton, Tooltip} from "@mui/material"
-import { ReactElement, useState } from "react"
 
 
 const Notification = () : ReactElement => {
-    const [open, setOpen] = useState<boolean>(false);
     const [count] = useState(100);
     return (
         <Badge
@@ -32,4 +31,4 @@ const Notification = () : ReactElement => {
     )
 }
 
-export default Notification;
+export default memo(Notification);

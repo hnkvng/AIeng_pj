@@ -2,7 +2,6 @@ import {
     Stack,
     AppBar,
     Toolbar,
-    TextField,
     IconButton,
 } from '@mui/material';
 import IconifyIcon from '@components/base/IconifyIcon';
@@ -12,6 +11,7 @@ import UserDropdown from './UserDropdown';
 import { useBreakpoints } from '@providers/Breakpoints.provider';
 import Notification from './Notification';
 import ModeTheme from './ModeTheme';
+import Searchbar from './Searchbar';
 
 const Topbar = ({
     open,
@@ -20,8 +20,8 @@ const Topbar = ({
     open: boolean;
     handleDrawerToggle: () => void;
   }): ReactElement => {
+
     const { down } = useBreakpoints();
-    
     const [showSearchMobile, setShowSearchMobile] = useState(false);
   
     const isMobileScreen = down('sm');
@@ -78,46 +78,7 @@ const Topbar = ({
             >
                 <IconifyIcon icon= {showSearchMobile ? 'basil:arrow-left-outline' : "mdi:search" } />
             </IconButton>
-            <TextField
-              variant='outlined'
-              fullWidth
-              placeholder="Search here..."
-              sx={{
-                visibility: {xs: showSearchMobile ? 'visible' : 'hidden', sm: 'visible'},
-                '& .MuiOutlinedInput-root': {
-                    '&.Mui-focused fieldset': {
-                        borderColor: 'text.primary',
-                        borderWidth: 1,
-                    }
-                }
-              }}
-              slotProps={
-                {
-                    input: {
-                        endAdornment: (
-                            <IconButton
-                                sx={{
-                                    padding: 5,
-                                    cursor: 'pointer',
-                                    borderRadius: 10,
-                                    color: 'text.secondary',
-                                    height: 40,
-                                    ':hover': {
-                                        backgroundColor: 'action.hover'
-                                    }
-                                }}
-                                onClick={() => console.log('search')}
-                            >
-                              <IconifyIcon icon="akar-icons:search" width={13} height={13}/>
-                            </IconButton>
-                        ),
-                        style: {
-                            borderRadius: 10,
-                        }
-                    }
-                }
-              }
-            />
+            <Searchbar showSearchMobile = {showSearchMobile}/>
           </Stack>
           {!showSearchMobile && <Stack
             direction="row"

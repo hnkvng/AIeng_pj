@@ -1,20 +1,24 @@
 import { ReactElement } from 'react';
 import { Link, List, Toolbar } from '@mui/material';
 import navItems from '@data/nav-items';
-import SimpleBar from 'simplebar-react';
 import NavItem from './NavItem';
 import { drawerCloseWidth, drawerOpenWidth } from '..';
 import Image from '@components/base/Image';
 import logoWithText from '/Logo-with-text.png';
-import logo from '@public/aleng.svg';
+import logo from '@public/Logo.png';
 import { rootPaths } from '@router/paths';
+import SimpleBar from 'simplebar-react';
 
 const Sidebar = ({ open }: { open: boolean }): ReactElement => {
   return (
     <>
       <Toolbar
         sx={{
-          height: 100,
+          position: 'fixed',
+          height: 98,
+          zIndex: 1,
+          bgcolor: 'background.paper',
+          p: 0,
           justifyContent: 'center',
           width: open ? drawerOpenWidth - 1 : drawerCloseWidth - 1,
         }}
@@ -32,12 +36,14 @@ const Sidebar = ({ open }: { open: boolean }): ReactElement => {
           />
         </Link>
       </Toolbar>
-      <SimpleBar style={{ maxHeight: '100vh'}}>
+      <SimpleBar style={{ maxHeight: '100%' }}>
         <List
           component="nav"
           sx={{
+            mt: 24.5,
+            py: 2.5,
+            // height: 724,
             justifyContent: 'space-between',
-            alignItems: 'center',
           }}
         >
           {navItems.map((navItem) => (
